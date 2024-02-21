@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 from datetime import datetime, timedelta
 
-bot = telebot.TeleBot('6523571865:AAH6fXdm8SHymZVQw1YXSi4h4gw30bBVZHc')
+bot = telebot.TeleBot('token')
 
 day_names = {
     'Monday': 'Понедельник',
