@@ -1,8 +1,9 @@
 import telebot
 from telebot import types
 from datetime import datetime, timedelta
+from token_1 import token
 
-bot = telebot.TeleBot('6523571865:AAH6fXdm8SHymZVQw1YXSi4h4gw30bBVZHc')
+bot = telebot.TeleBot(token)
 
 day_names = {
     'Monday': 'Понедельник',
@@ -11,6 +12,7 @@ day_names = {
     'Thursday': 'Четверг',
     'Friday': 'Пятница',
     'Saturday': 'Суббота',
+    'Sunday': 'Воскресенье'
 
 }
 # Функция для определения четности и номера недели
@@ -76,6 +78,9 @@ def get_schedule(day_of_week, week_parity, week_number):
                 4: 'Иностранный язык (ПР) ауд. И-320',
                 5: ' - ',
                 6: ' - '
+            },
+            'Sunday': {
+            1: 'Выходной'
             }
         }
     else:
@@ -127,6 +132,9 @@ def get_schedule(day_of_week, week_parity, week_number):
                 4: ' - ',
                 5: ' - ',
                 6: ' - '
+            },
+            'Sunday': {
+            1: 'Выходной'
             }
         }
 
